@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net9.0</TargetFramework>
+        <RuntimeIdentifier>linux-x64</RuntimeIdentifier>
+    </PropertyGroup>
+
+    <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+        <Exec Command="dotnet publish ../SPT.Launcher/SPT.Launcher.Linux.csproj -c Release -f net9.0 -r linux-x64 /p:IncludeNativeLibrariesForSelfExtract=true -p:PublishSingleFile=true --self-contained false" />
+        <Exec Command="bash ../buildlinux.sh" WorkingDirectory="$(ProjectDir)" />
+    </Target>
+
+    <ItemGroup>
+      <ProjectReference Include="..\SPT.Launcher.Base\SPT.Launcher.Base.Linux.csproj" />
+      <ProjectReference Include="..\SPT.Launcher\SPT.Launcher.Linux.csproj" />
+    </ItemGroup>
+
+</Project>

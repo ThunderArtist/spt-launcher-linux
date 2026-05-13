@@ -193,6 +193,7 @@ namespace SPT.Launcher.Helpers
             englishLocale.register_failed_name_limit = "name cannot exceed 15 characters";
             englishLocale.copy_failed = "Failed to copy data to clipboard";
             englishLocale.copy_logs_to_clipboard = "Copy logs to clipboard";
+            englishLocale.copy_launch_arguments = "Copy Launch Arguments";
             #endregion
 
             Directory.CreateDirectory(LocalizationProvider.DefaultLocaleFolderPath);
@@ -1136,6 +1137,15 @@ namespace SPT.Launcher.Helpers
             set => SetProperty(ref _core_dll_file_version_mismatch, value);
         }
 
+        #endregion
+
+        #region copy_launch_arguments
+        private string _copy_launch_arguments;
+        public string copy_launch_arguments
+        {
+            get => _copy_launch_arguments;
+            set => SetProperty(ref _copy_launch_arguments, value);
+        }
         #endregion
 
         #endregion

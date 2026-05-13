@@ -7,6 +7,8 @@ namespace SPT.Launcher.CustomControls;
 
 public partial class GameLaunchBar : UserControl
 {
+    public string LaunchArgs => GameStarter.GetLaunchArgs(ServerManager.SelectedServer, AccountManager.SelectedAccount);
+
     public GameLaunchBar()
     {
         InitializeComponent();

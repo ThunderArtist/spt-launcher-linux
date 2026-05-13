@@ -99,5 +99,6 @@
   "core_dll_file_version_mismatch": "BepinEx/plugins/spt/spt-core.dll dosya sürümünüz beklenenle eşleşmiyor ve başlatılamıyor. SPT'yi yeniden yüklemeyi deneyin",
   "register_failed_name_limit": "isim 15 karakteri geçemez",
   "copy_failed": "Veriler panoya kopyalanamadı",
-  "copy_logs_to_clipboard": "Günlükleri(Logs) panoya kopyala"
+  "copy_logs_to_clipboard": "Günlükleri(Logs) panoya kopyala",
+  "copy_launch_arguments": "Copy Launch Arguments"
 }

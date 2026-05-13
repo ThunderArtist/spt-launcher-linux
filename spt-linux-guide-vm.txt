@@ -1,0 +1,91 @@
+----------------------------------------------------------------------------------------------------------------------------------
+Download and patch the official Escape from Tarkov to SPT.
+----------------------------------------------------------------------------------------------------------------------------------
+Requirements:
+Internet connection
+A Virtual Machine Manager and Windows 11 installer ISO.
+A recent copy of Escape from Tarkov.
+Microsoft .NET 9.0 runtime
+BsgLauncher.exe - https://prod.escapefromtarkov.com/launcher/download
+SPTInstaller.exe - https://forge.sp-tarkov.com/installer
+A lot of free space, about 200GiB total (doesn't have to be on the same drive, details below).
+
+1. Create a Windows virtual machine.
+    50GB is enough space for the VM.
+    You share a folder with the VM or use 2 >100GB flash drives and pass them through.
+    (One flash drive for the official install and the other one for SPT).
+2. Inside it install "BsgLauncher.exe" (it will prompt you to reboot when it finishes).
+3. Reboot the virtual machine.
+4. Log into Battlestate Games Launcher and download Escape from Tarkov.
+5. After the download is finished exit and close Battlestate Games Launcher.
+6. Run "SPTInstaller.exe" and follow the instructions.
+    You'll need to install .NET 9.0:
+        aspnetcore-runtime-9.0.10-win-x64.exe
+        windowsdesktop-runtime-9.0.10-win-x64.exe
+    In drive C: where the patcher cache will go to you need 6-10GiB of free space.
+    Make sure you have 80GiB of free space on the target location before starting the patch.
+    Be patient during the patch download process, it is very slow.
+    This whole process is very slow. You may have to leave it overnight or just do other stuff, it is not heavy on resources.
+7. After "SPTInstaller.exe" finishes with no errors, close it.
+8. Start "SPT.Server.exe" and wait for it to say "Happy playing!".
+9. Start "SPT.Launcher.exe", make an account and launch the game (SPT needs to be started once to finish patching up).
+10. If the game works then congrats. SPT is a success! Next quest is to move the SPT installation to your Linux system.
+
+PS: There are Lutris install scripts out there and guides on how to do this underneath Linux but I had no luck with them :(
+https://github.com/MadByteDE/SPT-Linux-Guide
+----------------------------------------------------------------------------------------------------------------------------------
+Using SPT.Launcher.Linux for SPT account management (you will not be starting the game through it).
+----------------------------------------------------------------------------------------------------------------------------------
+Requirements:
+.NET 9.0 (ASP.NET Core Runtime) for Linux.
+    Help source - https://learn.microsoft.com/en-us/dotnet/core/install
+    (On Linux Mint 22.3 or Ubuntu-based OS)
+    If you don't have it inside your software manager, you need to add an ubuntu PPA.
+        sudo add-apt-repository ppa:dotnet/backports
+        sudo apt-get update && sudo apt-get install -y aspnetcore-runtime-9.0
+    To check what dotnet runtimes are installed use:
+        dotnet --list-runtimes
+    It should show you:
+        Microsoft.AspNetCore.App 9.0.15 [/usr/lib/dotnet/shared/Microsoft.AspNetCore.App]
+        Microsoft.NETCore.App 9.0.15 [/usr/lib/dotnet/shared/Microsoft.NETCore.App]
+
+(These are inside the folder "SPT")
+1. Mark "SPT.Server.Linux" as executable.
+2. Start "SPT.Server.Linux".
+3. Run "SPT.Launcher.Linux".
+----------------------------------------------------------------------------------------------------------------------------------
+Setting up the game and running it (finally).
+IMPORTANT - Before and while playing the game you must have SPT Server running
+----------------------------------------------------------------------------------------------------------------------------------
+Requirements:
+Your Launcher of choice (Lutris/Heroic/Steam).
+A runner (Proton/ProtonGE).
+
+1. Add "EscapeFromTarkov.exe".
+2. Select your Proton version (for example GE-Proton10-34).
+3. Optional - set a custom location for the Wine Prefix.
+4. Add a Wine DLL override "winhttp=native,builtin".
+    If your launcher doesn't have a dedicated place for Wine DLL overrides, add this to your launch commands:
+    WINEDLLOVERRIDES="winhttp=native,builtin" %command%
+5. Start SPT server (SPT.Server.Linux).
+6. Start SPT.Launcher.Linux and log in/register an account.
+7. Copy the launch arguments from SPT.Launcher.Linux and paste them as launch commands to your game in Lutris, Heroic or Steam.
+8. Start the Tarkov you added in your launcher (it may crash the first time, just start it again if it does).
+
+Enjoy playing Escape From Tarkov on Linux :)
+----------------------------------------------------------------------------------------------------------------------------------
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------
+Manual Wine DLL override method. Do this if the step above doesn't work.
+----------------------------------------------------------------------------------------------------------------------------------
+1. Go to your game's Wine prefix.
+    For Steam it is "/steam/steamapps/compatdata/{id-of-your-spt-entry}/pfx/user.reg"
+2. Open the "user.reg" file.
+3. Ctrl+F for "DLLOverrides".
+4. Find the line [Software\\Wine\\DllOverrides] (some number idk what it means).
+5. Add "winhttp"="native,builtin" to the bottom of the stack.
+6. Save the file
+7. Launch the game through your launcher - if God wills it it will work.
+----------------------------------------------------------------------------------------------------------------------------------

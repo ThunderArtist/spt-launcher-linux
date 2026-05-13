@@ -5,6 +5,7 @@
 
 # EmuTarkov
 [Bb]uild/
+[Bb]uild.Linux/
 
 # User-specific files
 *.rsuser

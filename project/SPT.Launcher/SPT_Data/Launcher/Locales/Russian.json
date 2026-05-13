@@ -99,5 +99,6 @@
   "core_dll_file_version_mismatch": "Версия файла BepinEx/plugins/spt/spt-core.dll не совпадает с ожидаемой версией, из-за чего запуск невозможен. Попытайтесь переустановить SPT",
   "register_failed_name_limit": "длина имени не может превышать 15 символов",
   "copy_failed": "Ошибка при копировании данных в буфер обмена",
-  "copy_logs_to_clipboard": "Скопировать логи в буфер обмена"
+  "copy_logs_to_clipboard": "Скопировать логи в буфер обмена",
+  "copy_launch_arguments": "Копируй Лаунч Аргументов"
 }

@@ -38,15 +38,26 @@
                         </StackPanel>
                     </StackPanel>
                 </StackPanel>
-
-
-                <Button Content="{Binding Source={x:Static helpers:LocalizationProvider.Instance}, Path=start_game}"
+                
+                <!-- Start Game button for Windows. -->
+                <!-- <Button Content="{Binding Source={x:Static helpers:LocalizationProvider.Instance}, Path=start_game}"
                         HorizontalAlignment="Right"
                         VerticalContentAlignment="Center"
                         VerticalAlignment="Stretch"
                         DockPanel.Dock="Right"
                         Command="{Binding $parent[UserControl].StartGameCommand}"
                         IsEnabled="{Binding Source={x:Static helpers:LauncherSettingsProvider.Instance}, Path=!GameRunning}"
+                        Classes="acc" /> -->
+
+                <!-- On Linux, the user will need a third-party launcher because of emulation/Proton settings.
+                Therefore this button will give the user launch arguments instead of launching the game. -->
+                <Button Content="{Binding Source={x:Static helpers:LocalizationProvider.Instance}, Path=copy_launch_arguments}"
+                        HorizontalAlignment="Right"
+                        VerticalContentAlignment="Center"
+                        VerticalAlignment="Stretch"
+                        DockPanel.Dock="Right"
+                        Command="{Binding CopyCommand}"
+                        CommandParameter="{Binding $parent[UserControl].LaunchArgs}"
                         Classes="acc" />
 
                 <Button Content="{Binding Source={x:Static helpers:LocalizationProvider.Instance}, Path=logout}"

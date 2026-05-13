@@ -136,8 +136,7 @@ namespace SPT.Launcher
             LogManager.Instance.Info("[LaunchGame] Applying Patch    :: OK");
             
             //start game
-            var args =
-                $"-force-gfx-jobs native -token={account.id} -config={Json.SerializeSingleQuotes(new ClientConfig(server.backendUrl))}";
+            var args = GetLaunchArgs(server, account);
 
             if (_showOnly)
             {
@@ -377,6 +376,13 @@ namespace SPT.Launcher
             }
 
             return true;
+        }
+
+        public static string GetLaunchArgs(ServerInfo server, AccountInfo account)
+        {
+            return $"-force-gfx-jobs native "
+                + $"-token={account.id} "
+                + $"-config=\"{Json.SerializeSingleQuotes(new ClientConfig(server.backendUrl))}\"";
         }
     }
 }
