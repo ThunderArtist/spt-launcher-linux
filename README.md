@@ -64,7 +64,7 @@ git config --local user.email "USERNAME@SOMETHING.com"
 - .NET 9 SDK
 - A rich text editor (VSCodium)
 - Open `project/SPT.Build` directory in Terminal
-- Run `dotnet publish SPT.Build.csproj`
+- Run `dotnet publish SPT.Build.Linux.csproj`
 - Build results are stored in `project/Build.Linux`
 
 ## Server Endpoints
