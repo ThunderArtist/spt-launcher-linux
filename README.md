@@ -19,7 +19,7 @@ Go to the [Releases](https://github.com/ThunderArtist/spt-launcher-linux/release
     * (Linux Mint 22.3) I had to add it manually with an ubuntu PPA
     * 		sudo add-apt-repository ppa:dotnet/backports
     * 		sudo apt-get update && sudo apt-get install -y aspnetcore-runtime-9.0
-- An SPT install - [GUIDE on how to install and set up SPT by using a Windows virtual machine](./spt-linux-guide-vm.txt)
+- An SPT install - [GUIDE on how to install and set up SPT by using a Windows virtual machine](./spt-linux-guide-vm.md)
 - A third-party launcher to start your game with (Lutris/Heroic/Steam)
 - A runner (Proton/ProtonGE) to emulate the game with
 
