@@ -1,3 +1,5 @@
+![](screenshot1.png)
+
 ## A Linux build/fork of the original [SPT.Launcher](https://github.com/sp-tarkov/launcher)
 
 This Linux "Launcher" ironically won't actually start your game. It is more like an account manager for your SPT (or Fika) accounts.
