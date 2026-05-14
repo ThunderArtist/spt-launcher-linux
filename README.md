@@ -28,7 +28,7 @@ Go to the [Releases](https://github.com/ThunderArtist/spt-launcher-linux/release
 ## How to use
 
 - Start the SPT server. SPT has a native Linux server included `SPT/SPT.Server.Linux` (requires .NET 9 runtime). Mark it as executable and launch it through Terminal to see it
-- Start SPT.Launcher.Linux
+- Start `SPT.Launcher.Linux`
 - Create/login to an account
 - Press "Copy Launch Arguments"
 - Paste them into the launch arguments dialog inside your launcher of choice.
@@ -71,4 +71,11 @@ git config --local user.email "USERNAME@SOMETHING.com"
 - Build results are stored in `project/Build.Linux`
 
 ## Server Endpoints
+
 If you just want to mess with the server endpoints, you can use this [postman collection](https://gofile.io/d/kCzmze)
+
+## Thank you to the SPT developers and maintainers <3
+
+Thank you for creating and maintaining the SPT project. The modding community is lovely and the open source culture is awesome!
+
+I've tried my best to keep this fork's changes separate from the original code so that it would be easy to merge. Feel free to contact me if you need assistance merging this with your official repo :)
