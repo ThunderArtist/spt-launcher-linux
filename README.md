@@ -6,13 +6,17 @@ This Linux "Launcher" ironically won't actually start your game. It is more like
 
 It is identical to the official one with the only difference being that instead of having a "Start Game" button it has a "Copy Launch Arguments" one. You will paste those arguments in your preferred launcher (Lutris/Heroic/Steam) and run your game with Proton.
 
-**THIS IS ONLY THE LAUNCHER, NOT THE PATCHER OR INSTALLER!!!** To install SPT I recommend using a Windows virtual machine. Yes, I know of the Lutris install scripts but I had big trouble using them :(
+**THIS IS ONLY THE LAUNCHER, NOT THE PATCHER OR INSTALLER!!!** To install SPT I recommend using a Windows virtual machine - [MY GUIDE](./spt-linux-guide-vm.md).
 
-If you want to try out the Lutris scripts then check out [SPT-Linux-Guide](https://github.com/MadByteDE/SPT-Linux-Guide).
+Yes, I know of the Lutris install scripts but I had big trouble using them :( If you want to try them out then look at [SPT-Linux-Guide](https://github.com/MadByteDE/SPT-Linux-Guide).
+
+**DISCLAIMER: You don't have to put this inside your game folder to use it but if you still wish to do that, it will overwrite the original launcher's locale files, `Assembly-CSharp.dll.delta` and `LICENSE-Launcher.txt`(license is the same as the original). Doing so should not cause you trouble but I recommend just keeping it outside.**
 
 ## Download
 
 Go to the [Releases](https://github.com/ThunderArtist/spt-launcher-linux/releases) page and download `SPT.Launcher.Linux-*.tar.gz`
+
+[SPT-Forge link](https://forge.sp-tarkov.com/mod/2693/spt-launcher-linux)
 
 ## Requirements
 
@@ -21,7 +25,7 @@ Go to the [Releases](https://github.com/ThunderArtist/spt-launcher-linux/release
     * (Linux Mint 22.3) I had to add it manually with an ubuntu PPA
     * 		sudo add-apt-repository ppa:dotnet/backports
     * 		sudo apt-get update && sudo apt-get install -y aspnetcore-runtime-9.0
-- An SPT install - [GUIDE on how to install and set up SPT by using a Windows virtual machine](./spt-linux-guide-vm.md)
+- An SPT install
 - A third-party launcher to start your game with (Lutris/Heroic/Steam)
 - A runner (Proton/ProtonGE) to emulate the game with
 
@@ -31,8 +35,8 @@ Go to the [Releases](https://github.com/ThunderArtist/spt-launcher-linux/release
 - Start `SPT.Launcher.Linux`
 - Create/login to an account
 - Press "Copy Launch Arguments"
-- Paste them into the launch arguments dialog inside your launcher of choice.
-- To change the account playing you just select the account you want and copy-paste the launch arguments again.
+- Paste them into the launch arguments dialog inside your launcher of choice
+- To change the account playing you just select the account you want and copy-paste the launch arguments again
 
 ## What the launch arguments mean
 
