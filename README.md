@@ -20,7 +20,7 @@ Go to the [Releases](https://github.com/ThunderArtist/spt-launcher-linux/release
 
 ## Requirements
 
-- ASP.NET 9 Core Runtime ([how to install?](https://learn.microsoft.com/en-us/dotnet/core/install))
+- ASP.NET 9 Core Runtime ([how to install?](https://learn.microsoft.com/en-us/dotnet/core/install/linux))
     * Check if you have it available in your package manager
     * (Linux Mint 22.3) I had to add it manually with an ubuntu PPA
     * 		sudo add-apt-repository ppa:dotnet/backports
@@ -35,7 +35,7 @@ Go to the [Releases](https://github.com/ThunderArtist/spt-launcher-linux/release
 - Start `SPT.Launcher.Linux`
 - Create/login to an account
 - Press "Copy Launch Arguments"
-- Paste them into the launch arguments dialog inside your launcher of choice
+- Paste them into the launch arguments dialog inside your launcher of choice (Lutris/Heroic/Steam)
 - To change the account playing you just select the account you want and copy-paste the launch arguments again
 
 ## What the launch arguments mean
