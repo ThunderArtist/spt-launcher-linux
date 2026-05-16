@@ -16,7 +16,7 @@ Yes, I know of the Lutris install scripts but I had big trouble using them :( If
 
 Go to the [Releases](https://github.com/ThunderArtist/spt-launcher-linux/releases) page and download `SPT.Launcher.Linux-*.tar.gz`
 
-[SPT-Forge link](https://forge.sp-tarkov.com/mod/2693/spt-launcher-linux)
+The `7z` one is the [SPT-Forge Edition](https://forge.sp-tarkov.com/mod/2693/spt-launcher-linux) (folder structure that supports drag and drop into game folder).
 
 ## Requirements
 
