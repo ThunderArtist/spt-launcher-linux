@@ -1,6 +1,12 @@
 ![](screenshot1.png)
 
-## A Linux build/fork of the original [SPT.Launcher](https://github.com/sp-tarkov/launcher)
+Supported SPT  version - **4.0.X**
+
+**If you are running SPT version 4.1.X you do not need this and this will not work.**
+
+Since SPT 4.1.0 there is a Linux launcher included! That one WILL actually start your game, just remember to put `WINEDLLOVERRIDES="winhttp=n,b" %command%` as launch options or the game will crash instantly.
+
+## A Linux build/fork of the original (4.0.X) [SPT.Launcher](https://github.com/sp-tarkov/launcher)
 
 This Linux "Launcher" ironically won't actually start your game. It is more like an account manager for your SPT (or Fika) accounts.
 
@@ -74,12 +80,6 @@ git config --local user.email "USERNAME@SOMETHING.com"
 - Run `dotnet publish SPT.Build.Linux.csproj`
 - Build results are stored in `project/Build.Linux`
 
-## Server Endpoints
-
-If you just want to mess with the server endpoints, you can use this [postman collection](https://gofile.io/d/kCzmze)
-
 ## Thank you to the SPT developers and maintainers <3
 
 Thank you for creating and maintaining the SPT project. The modding community is lovely and the open source culture is awesome!
-
-I've tried my best to keep this fork's changes separate from the original code so that it would be easy to merge. Feel free to contact me if you need assistance merging this with your official repo :)
