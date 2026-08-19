@@ -4,7 +4,7 @@ Supported SPT  version - **4.0.X**
 
 **If you are running SPT version 4.1.X you do not need this and this will not work.**
 
-Since SPT 4.1.0 there is a Linux launcher included! That one WILL actually start your game, just remember to put `WINEDLLOVERRIDES="winhttp=n,b" %command%` as launch options or the game will crash instantly.
+Since SPT 4.1.0 there is a Linux launcher included! That one WILL actually start your game.
 
 ## A Linux build/fork of the original (4.0.X) [SPT.Launcher](https://github.com/sp-tarkov/launcher)
 
@@ -12,9 +12,11 @@ This Linux "Launcher" ironically won't actually start your game. It is more like
 
 It is identical to the official one with the only difference being that instead of having a "Start Game" button it has a "Copy Launch Arguments" one. You will paste those arguments in your preferred launcher (Lutris/Heroic/Steam) and run your game with Proton.
 
-**THIS IS ONLY THE LAUNCHER, NOT THE PATCHER OR INSTALLER!!!** To install SPT I recommend using a Windows virtual machine - [MY GUIDE](./spt-linux-guide-vm.md).
+**THIS IS ONLY THE LAUNCHER, NOT THE PATCHER OR INSTALLER!!!**
 
-Yes, I know of the Lutris install scripts but I had big trouble using them :( If you want to try them out then look at [SPT-Linux-Guide](https://github.com/MadByteDE/SPT-Linux-Guide).
+I install SPT using a Windows virtual machine - [MY GUIDE](./spt-linux-guide-vm.md).
+
+If you want to try native Linux methods then check out [SPT-Linux-Guide](https://github.com/MadByteDE/SPT-Linux-Guide).
 
 **DISCLAIMER: You don't have to put this inside your game folder to use it but if you still wish to do that, it will overwrite the original launcher's locale files, `Assembly-CSharp.dll.delta` and `LICENSE-Launcher.txt`(license is the same as the original). Doing so should not cause you trouble but I recommend just keeping it outside.**
 
@@ -22,7 +24,7 @@ Yes, I know of the Lutris install scripts but I had big trouble using them :( If
 
 Go to the [Releases](https://github.com/ThunderArtist/spt-launcher-linux/releases) page and download `SPT.Launcher.Linux-*.tar.gz`
 
-The `7z` one is the [SPT-Forge Edition](https://forge.sp-tarkov.com/mod/2693/spt-launcher-linux) (folder structure that supports drag and drop into game folder).
+The `7z` one is the [SPT-Forge Edition](https://sp-mod.com/mod/2693/spt-launcher-linux) (folder structure that supports drag and drop into game folder).
 
 ## Requirements
 

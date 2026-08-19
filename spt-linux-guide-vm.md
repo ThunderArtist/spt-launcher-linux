@@ -8,7 +8,7 @@ Requirements:
 - A recent copy of Escape from Tarkov
 - Microsoft .NET 9.0 runtime
 - [BsgLauncher.exe](https://prod.escapefromtarkov.com/launcher/download)
-- [SPTInstaller.exe](https://forge.sp-tarkov.com/installer)
+- [SPTInstaller.exe](https://sp-mod.com/installer)
 - A lot of free space, about 200GiB total (doesn't have to be on the same drive, details below)
 
 Steps:
